@@ -1,39 +1,37 @@
-# lgd-center
+# 乐观点-微服务系统
 
 #### 介绍
-{**以下是 Gitee 平台说明，您可以替换此简介**
-Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用 Gitee 实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+{乐观点-微服务系统}
 
 #### 软件架构
-软件架构说明
+* 采用微服务、前后端分离的模式
+* 后端版本 [lgd-cloud](https://gitee.com/itptn/lgd-cloud.git)
+* 前端版本 [lgd-web](https://gitee.com/itptn/lgd-web.git)
 
+框架(组件) | 版本 | 说明
+---|---|---
+Spring Boot | 2.3.5.RELEASE |
+Spring Cloud | Hoxton.SR8 |
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 开发日志
+- 2020-11-04
+- [x] 后端空项目框架提交
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 安装教程
 
-#### 参与贡献
+1. 环境准备
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+服务器 | IP | Nacos | Mysql | Redis | 服务 | 网页
+---|---|---|---|---|---|---
+master | 39.100.145.118 | - | 主 | - | 节点 | 主
+node1 | 47.107.64.177 | - | - | - | 节点 | 从
+node2 | 118.25.91.115 | 主 | 从 | 主 | 节点 | 从
 
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+2. 组件版本
+- CentOS 7.6 64位
+- jdk-8u151-linux-x64.rpm
+- mysql57-community-release-el7-8.noarch.rpm
+- redis-6.0.7.tar.gz
+- nacos-server-1.3.2.zip
