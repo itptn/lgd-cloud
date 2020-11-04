@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="c-base" />
+        <module name="s-system" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="lgd-cloud" target="1.5" />
+      <module name="c-base" target="1.8" />
+      <module name="lgd-cloud" target="1.8" />
+      <module name="lgd-common" target="1.8" />
+      <module name="lgd-service" target="1.8" />
+      <module name="s-system" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <groupId>com.lgd</groupId>
     <artifactId>lgd-cloud</artifactId>
     <version>1.0.0</version>
@@ -11,12 +12,16 @@
     <description>乐观点-微服务系统</description>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>lgd-service</module>
+        <module>lgd-common</module>
+    </modules>
 
     <properties>
         <lgd.version>1.0.0</lgd.version>
         <java.version>1.8</java.version>
         <compiler.version>3.8.1</compiler.version>
-        <build.encoding>UTF-8</build.encoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <spring-boot.version>2.3.5.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
@@ -45,10 +50,17 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- 乐观点-公共基础模块 -->
+            <dependency>
+                <groupId>com.lgd</groupId>
+                <artifactId>c-base</artifactId>
+                <version>${lgd.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+        <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -66,7 +78,7 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                    <encoding>${build.encoding}</encoding>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>

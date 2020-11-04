@@ -14,6 +14,8 @@ Spring Boot | 2.3.5.RELEASE |
 Spring Cloud | Hoxton.SR8 |
 
 #### 开发日志
+- [ ] 实现登录功能
+- [ ] 实现权限功能
 - 2020-11-04
 - [x] 后端空项目框架提交
 
