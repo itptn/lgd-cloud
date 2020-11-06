@@ -13,16 +13,49 @@
     <description>乐观点-系统微服务</description>
 
     <dependencies>
-        <!-- SpringBoot整合Web组件 -->
+
+        <!-- druid-boot -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.1</version>
         </dependency>
 
-        <!-- 乐观点-公共基础模块 -->
+        <!-- mysql-connector -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- mybatis-plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <!-- mybatis-plus generator -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+
+        <!-- velocity -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+        </dependency>
+
+        <!-- 乐观点-公共缓存模块 -->
         <dependency>
             <groupId>com.lgd</groupId>
-            <artifactId>c-base</artifactId>
+            <artifactId>c-cache</artifactId>
+        </dependency>
+
+        <!-- 乐观点-公共网页模块 -->
+        <dependency>
+            <groupId>com.lgd</groupId>
+            <artifactId>c-web</artifactId>
         </dependency>
 
     </dependencies>

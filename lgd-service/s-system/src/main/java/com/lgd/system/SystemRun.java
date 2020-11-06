@@ -1,8 +1,10 @@
 package com.lgd.system;
 
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author YYJ
@@ -11,6 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @Slf4j
 @SpringBootApplication
+@ComponentScan({"com.lgd"})
+@MapperScan("com.lgd.system.mapper")
 public class SystemRun {
 
     public static void main(String[] args) {

@@ -1,10 +1,11 @@
 package com.lgd.system.controller;
 
 import com.lgd.base.LgdResult;
+import com.lgd.cache.CacheService;
+import com.lgd.system.pojo.dto.LoginDto;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,9 +20,26 @@ import java.util.Map;
 @RequestMapping("/auth")
 public class SysAuthController {
 
-    @PostMapping("login")
-    public LgdResult<String> login(){
+    @Autowired
+    private CacheService cacheService;
+
+    @GetMapping("currentUser")
+    public LgdResult<String> currentUser() {
+        cacheService.incr("pv");
         LgdResult lgdResult = LgdResult.init();
         return lgdResult;
+    }
+
+    @PostMapping("login")
+    public Map<String, Object> login(@RequestBody LoginDto loginDto) {
+        System.out.println(loginDto.getUsername());
+        System.out.println(loginDto.getType());
+        Map<String, Object> result = new HashMap<>();
+        result.put("status", "ok");
+        result.put("type", loginDto.getType());
+        result.put("currentAuthority", "admin");
+        cacheService.incr("pv");
+        cacheService.put(loginDto.getUsername(), loginDto.getType());
+        return result;
     }
 }

@@ -11,7 +11,9 @@
 框架(组件) | 版本 | 说明
 ---|---|---
 Spring Boot | 2.3.5.RELEASE |
-Spring Cloud | Hoxton.SR8 |
+Spring Cloud | Hoxton.SR8 | 微服务架构组件包
+Spring Data Redis | 2.3.5.RELEASE | 缓存
+MyBatis-Plus | 3.4.0 | MyBatis增强工具
 
 #### 开发日志
 - [ ] 实现登录功能

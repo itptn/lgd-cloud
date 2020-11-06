@@ -1,2 +1,4 @@
 com\lgd\base\LgdData.class
+com\lgd\base\exception\LgdException.class
 com\lgd\base\LgdResult.class
+com\lgd\base\enums\ResultEnum.class

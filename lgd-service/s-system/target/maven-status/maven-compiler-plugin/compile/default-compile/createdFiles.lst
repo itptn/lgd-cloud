@@ -1,2 +1,7 @@
+com\lgd\system\service\SysCodeService$1.class
+com\lgd\system\service\SysCodeService.class
 com\lgd\system\SystemRun.class
+com\lgd\system\pojo\dto\LoginDto.class
+com\lgd\system\pojo\dto\SysCodeDto.class
 com\lgd\system\controller\SysAuthController.class
+com\lgd\system\controller\SysCodeController.class

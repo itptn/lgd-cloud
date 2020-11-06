@@ -26,21 +26,16 @@
         <spring-boot.version>2.3.5.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
 
+        <mybatis-plus.version>3.4.0</mybatis-plus.version>
+        <velocity.version>2.2</velocity.version>
+        <commons-collections.version>4.1</commons-collections.version>
+
         <lombok.version>1.18.4</lombok.version>
     </properties>
 
     <!-- 依赖声明 -->
     <dependencyManagement>
         <dependencies>
-            <!-- SpringCloud 依赖配置 -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
             <!-- SpringBoot的依赖配置 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -50,12 +45,71 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- SpringCloud 依赖配置 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- mybatis-plus generator -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- velocity -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
+
+            <!-- commons-collections4 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+
             <!-- 乐观点-公共基础模块 -->
             <dependency>
                 <groupId>com.lgd</groupId>
                 <artifactId>c-base</artifactId>
                 <version>${lgd.version}</version>
             </dependency>
+
+            <!-- 观点-公共工具模块 -->
+            <dependency>
+                <groupId>com.lgd</groupId>
+                <artifactId>c-utils</artifactId>
+                <version>${lgd.version}</version>
+            </dependency>
+
+            <!-- 乐观点-公共缓存模块 -->
+            <dependency>
+                <groupId>com.lgd</groupId>
+                <artifactId>c-cache</artifactId>
+                <version>${lgd.version}</version>
+            </dependency>
+
+            <!-- 乐观点-公共网页模块 -->
+            <dependency>
+                <groupId>com.lgd</groupId>
+                <artifactId>c-web</artifactId>
+                <version>${lgd.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

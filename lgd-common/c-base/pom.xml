@@ -7,6 +7,7 @@
         <groupId>com.lgd</groupId>
         <version>1.0.0</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>c-base</artifactId>
     <description>乐观点-公共基础模块</description>

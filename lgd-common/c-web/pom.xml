@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lgd-common</artifactId>
+        <groupId>com.lgd</groupId>
+        <version>1.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>c-web</artifactId>
+    <description>乐观点-公共网页模块</description>
+
+    <dependencies>
+        <!-- SpringBoot Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- SpringBoot validation -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- 乐观点-公共基础模块 -->
+        <dependency>
+            <groupId>com.lgd</groupId>
+            <artifactId>c-base</artifactId>
+        </dependency>
+
+        <!-- 观点-公共工具模块 -->
+        <dependency>
+            <groupId>com.lgd</groupId>
+            <artifactId>c-utils</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>

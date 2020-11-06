@@ -15,6 +15,9 @@
 
     <modules>
         <module>c-base</module>
+        <module>c-utils</module>
+        <module>c-cache</module>
+        <module>c-web</module>
     </modules>
 
 </project>

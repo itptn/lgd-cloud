@@ -12,6 +12,5 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.4" level="project" />
-    <orderEntry type="module" module-name="c-base" scope="PROVIDED" />
   </component>
 </module>
