@@ -1,4 +1,4 @@
-package com.lgd.system.pojo.dto;
+package com.lgd.system.pojo.req;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 @Getter
 @Setter
-public class LoginDto implements Serializable {
+public class LoginReq implements Serializable {
     private static final long serialVersionUID = -3282904392457271336L;
 
     private String username;

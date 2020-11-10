@@ -16,8 +16,8 @@ import java.util.List;
 public class LgdData<T> implements Serializable {
 
     private static final long serialVersionUID = 5081801760183408243L;
-    private List<T> list;
-    private int current;
-    private int pageSize;
-    private int total;
+    private long current;
+    private long pageSize;
+    private long total;
+    private List<T> rows;
 }

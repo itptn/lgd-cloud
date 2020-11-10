@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.lgd.system.pojo.dto.SysCodeDto;
+import com.lgd.system.pojo.req.SysCodeReq;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class SysCodeService {
     @Value("${spring.datasource.password}")
     private String password;
 
-    public boolean genCode(SysCodeDto sysCodeDto) {
+    public boolean genCode(SysCodeReq sysCodeReq) {
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
@@ -34,11 +34,12 @@ public class SysCodeService {
         gc.setAuthor("YYJ");
         gc.setOpen(false);
         gc.setFileOverride(true);
+        gc.setServiceName("%sService");
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://node1:3306/" + sysCodeDto.getDbName() + "?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://node1:3306/" + sysCodeReq.getDbName() + "?useUnicode=true&useSSL=false&characterEncoding=utf8");
         dsc.setDriverName(driverClassName);
         dsc.setUsername(username);
         dsc.setPassword(password);
@@ -47,7 +48,7 @@ public class SysCodeService {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent("com.lgd");
-        pc.setModuleName(sysCodeDto.getModuleName());
+        pc.setModuleName(sysCodeReq.getModuleName());
         pc.setEntity("pojo.entity");
         mpg.setPackageInfo(pc);
 
@@ -59,6 +60,7 @@ public class SysCodeService {
             }
         };
         mpg.setCfg(cfg);
+
 
         // 配置模板
         TemplateConfig templateConfig = new TemplateConfig();
@@ -81,7 +83,7 @@ public class SysCodeService {
         strategy.setSuperControllerClass("com.lgd.LgdController");
         // 写于父类中的公共字段
         strategy.setSuperEntityColumns("id");
-        strategy.setInclude(sysCodeDto.getTables());
+        strategy.setInclude(sysCodeReq.getTables());
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);

@@ -9,6 +9,10 @@ import lombok.Getter;
 public enum ResultEnum {
 
     SUCCESS("0000", "操作成功"),
+
+    登陆方式不支持("S0001", "登陆方式不支持"),
+    用户名或密码不能为空("S0002", "用户名或密码不能为空"),
+    用户名或密码不正确("S0003", "用户名或密码不正确"),
     FAIL("9999", "操作失败");
 
     private String code;

@@ -25,6 +25,13 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
+        <!-- mybatis-plus extension -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
         <!-- 乐观点-公共基础模块 -->
         <dependency>
             <groupId>com.lgd</groupId>
@@ -36,6 +43,7 @@
             <groupId>com.lgd</groupId>
             <artifactId>c-utils</artifactId>
         </dependency>
+
 
     </dependencies>
 </project>

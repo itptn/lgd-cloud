@@ -2,15 +2,17 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="c-base" />
-        <module name="c-web" />
-        <module name="c-cache" />
         <module name="c-utils" />
+        <module name="s-gateway" />
         <module name="s-system" />
+        <module name="c-web" />
+        <module name="c-base" />
+        <module name="c-cache" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,6 +23,7 @@
       <module name="lgd-cloud" target="1.8" />
       <module name="lgd-common" target="1.8" />
       <module name="lgd-service" target="1.8" />
+      <module name="s-gateway" target="1.8" />
       <module name="s-system" target="1.8" />
     </bytecodeTargetLevel>
   </component>

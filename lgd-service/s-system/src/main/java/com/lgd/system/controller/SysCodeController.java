@@ -1,16 +1,15 @@
 package com.lgd.system.controller;
 
 import com.lgd.base.LgdResult;
-import com.lgd.system.pojo.dto.LoginDto;
-import com.lgd.system.pojo.dto.SysCodeDto;
+import com.lgd.system.pojo.req.SysCodeReq;
 import com.lgd.system.service.SysCodeService;
 import com.lgd.web.LgdController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author YYJ
@@ -26,8 +25,8 @@ public class SysCodeController extends LgdController {
     private SysCodeService sysCodeService;
 
     @PostMapping("genCode")
-    public LgdResult<Boolean> genCode(@RequestBody SysCodeDto sysCodeDto) {
-        validate(sysCodeDto);
-        return LgdResult.ok(sysCodeService.genCode(sysCodeDto));
+    public LgdResult<Boolean> genCode(@RequestBody SysCodeReq sysCodeReq) {
+        validate(sysCodeReq);
+        return LgdResult.ok(sysCodeService.genCode(sysCodeReq));
     }
 }

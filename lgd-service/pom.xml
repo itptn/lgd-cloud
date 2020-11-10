@@ -15,5 +15,6 @@
 
     <modules>
         <module>s-system</module>
+        <module>s-gateway</module>
     </modules>
 </project>

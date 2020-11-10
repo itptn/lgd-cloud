@@ -2,7 +2,6 @@ package com.lgd.base;
 
 import com.lgd.base.enums.ResultEnum;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -12,7 +11,6 @@ import java.io.Serializable;
  * @since 2020/11/4 17:03
  */
 @Getter
-@Setter
 public class LgdResult<D> implements Serializable {
 
     private static final long serialVersionUID = -7237955868021173850L;
@@ -21,37 +19,94 @@ public class LgdResult<D> implements Serializable {
     private String msg;
     private D data;
 
-    public static <D> LgdResult<D> ok(D data) {
-        return init(true, ResultEnum.SUCCESS, data);
+    /**
+     * 初始化【成功】结果
+     *
+     * @param data
+     * @param <D>
+     * @return
+     */
+    public static <D> LgdResult<D> init(D data) {
+        return init(true, ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMsg(), data);
     }
 
-    public static <D> LgdResult<D> fail(String msg) {
+    /**
+     * 初始化【失败】结果
+     *
+     * @param <D>
+     * @return
+     */
+    public static <D> LgdResult<D> init() {
+        return init(ResultEnum.FAIL.getMsg());
+    }
+
+    /**
+     * 初始化【失败】结果
+     *
+     * @param msg
+     * @param <D>
+     * @return
+     */
+    public static <D> LgdResult<D> init(String msg) {
         return init(false, ResultEnum.FAIL.getCode(), msg, null);
     }
 
-    public static <D> LgdResult<D> fail(ResultEnum resultEnum) {
-        return init(false, ResultEnum.FAIL, null);
+    /**
+     * 初始化【失败】结果
+     *
+     * @param resultEnum
+     * @param <D>
+     * @return
+     */
+    public static <D> LgdResult<D> init(ResultEnum resultEnum) {
+        return init(false, ResultEnum.FAIL.getCode(), ResultEnum.FAIL.getMsg(), null);
     }
 
-    public static <D> LgdResult<D> init() {
-        return init(false, ResultEnum.FAIL, null);
-    }
-
-    public static <D> LgdResult<D> init(boolean success, ResultEnum resultEnum, D data) {
-        LgdResult<D> lgdResult = new LgdResult();
-        lgdResult.setSuccess(success);
-        lgdResult.setCode(resultEnum.getCode());
-        lgdResult.setMsg(resultEnum.getMsg());
-        lgdResult.setData(data);
-        return lgdResult;
-    }
-
-    public static <D> LgdResult<D> init(boolean success, String code, String msg, D data) {
+    private static <D> LgdResult<D> init(boolean success, String code, String msg, D data) {
         LgdResult<D> lgdResult = new LgdResult();
         lgdResult.setSuccess(success);
         lgdResult.setCode(code);
         lgdResult.setMsg(msg);
         lgdResult.setData(data);
         return lgdResult;
+    }
+
+    public LgdResult setOk(D data) {
+        this.setSuccess(true);
+        this.setCode(ResultEnum.SUCCESS.getCode());
+        this.setMsg(ResultEnum.SUCCESS.getMsg());
+        this.setData(data);
+        return this;
+    }
+
+    public LgdResult setFail(String msg) {
+        this.setSuccess(false);
+        this.setCode(ResultEnum.FAIL.getCode());
+        this.setMsg(msg);
+        return this;
+    }
+
+    public LgdResult setFail(ResultEnum resultEnum) {
+        this.setSuccess(false);
+        this.setCode(resultEnum.getCode());
+        this.setMsg(resultEnum.getMsg());
+        return this;
+    }
+
+    public LgdResult setData(D data) {
+        this.data = data;
+        return this;
+    }
+
+    void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    void setCode(String code) {
+        this.code = code;
+    }
+
+    void setMsg(String msg) {
+        this.msg = msg;
     }
 }

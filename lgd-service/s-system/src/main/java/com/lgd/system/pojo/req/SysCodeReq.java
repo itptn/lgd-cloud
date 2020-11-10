@@ -1,4 +1,4 @@
-package com.lgd.system.pojo.dto;
+package com.lgd.system.pojo.req;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,7 +12,7 @@ import javax.validation.constraints.NotEmpty;
  */
 @Getter
 @Setter
-public class SysCodeDto {
+public class SysCodeReq {
 
     @NotEmpty(message = "模块名称不能为空")
     private String moduleName;
