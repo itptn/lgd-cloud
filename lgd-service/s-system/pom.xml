@@ -13,12 +13,22 @@
     <description>乐观点-系统微服务</description>
 
     <dependencies>
+        <!-- Nacos Discovery -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
 
-        <!-- druid-boot -->
+        <!-- Nacos Config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+        <!-- druid -->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.2.1</version>
+            <artifactId>druid</artifactId>
         </dependency>
 
         <!-- mysql-connector -->
@@ -57,6 +67,11 @@
             <artifactId>c-web</artifactId>
         </dependency>
 
+        <!-- 乐观点-系统Feign接口 -->
+        <dependency>
+            <groupId>com.lgd</groupId>
+            <artifactId>f-system</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

@@ -24,7 +24,7 @@ public class LgdResult<D> implements Serializable {
      *
      * @param data
      * @param <D>
-     * @return
+     * @return LgdResult
      */
     public static <D> LgdResult<D> init(D data) {
         return init(true, ResultEnum.SUCCESS.getCode(), ResultEnum.SUCCESS.getMsg(), data);
@@ -34,7 +34,7 @@ public class LgdResult<D> implements Serializable {
      * 初始化【失败】结果
      *
      * @param <D>
-     * @return
+     * @return LgdResult
      */
     public static <D> LgdResult<D> init() {
         return init(ResultEnum.FAIL.getMsg());
@@ -45,7 +45,7 @@ public class LgdResult<D> implements Serializable {
      *
      * @param msg
      * @param <D>
-     * @return
+     * @return LgdResult
      */
     public static <D> LgdResult<D> init(String msg) {
         return init(false, ResultEnum.FAIL.getCode(), msg, null);
@@ -56,10 +56,62 @@ public class LgdResult<D> implements Serializable {
      *
      * @param resultEnum
      * @param <D>
-     * @return
+     * @return LgdResult
      */
     public static <D> LgdResult<D> init(ResultEnum resultEnum) {
         return init(false, ResultEnum.FAIL.getCode(), ResultEnum.FAIL.getMsg(), null);
+    }
+
+
+    /**
+     * 设置成功
+     *
+     * @param data
+     * @return LgdResult
+     */
+    public LgdResult setOk(D data) {
+        this.setSuccess(true);
+        this.setCode(ResultEnum.SUCCESS.getCode());
+        this.setMsg(ResultEnum.SUCCESS.getMsg());
+        this.setData(data);
+        return this;
+    }
+
+    /**
+     * 设置失败
+     *
+     * @param msg
+     * @return LgdResult
+     */
+    public LgdResult setFail(String msg) {
+        this.setSuccess(false);
+        this.setCode(ResultEnum.FAIL.getCode());
+        this.setMsg(msg);
+        return this;
+    }
+
+    /**
+     * 设置失败
+     *
+     * @param resultEnum
+     * @return LgdResult
+     */
+    public LgdResult setFail(ResultEnum resultEnum) {
+        this.setSuccess(false);
+        this.setCode(resultEnum.getCode());
+        this.setMsg(resultEnum.getMsg());
+        return this;
+    }
+
+    /**
+     * 设置结果数据
+     *
+     * @param data
+     * @return LgdResult
+     */
+    public LgdResult setData(D data) {
+        this.data = data;
+        return this;
     }
 
     private static <D> LgdResult<D> init(boolean success, String code, String msg, D data) {
@@ -69,33 +121,6 @@ public class LgdResult<D> implements Serializable {
         lgdResult.setMsg(msg);
         lgdResult.setData(data);
         return lgdResult;
-    }
-
-    public LgdResult setOk(D data) {
-        this.setSuccess(true);
-        this.setCode(ResultEnum.SUCCESS.getCode());
-        this.setMsg(ResultEnum.SUCCESS.getMsg());
-        this.setData(data);
-        return this;
-    }
-
-    public LgdResult setFail(String msg) {
-        this.setSuccess(false);
-        this.setCode(ResultEnum.FAIL.getCode());
-        this.setMsg(msg);
-        return this;
-    }
-
-    public LgdResult setFail(ResultEnum resultEnum) {
-        this.setSuccess(false);
-        this.setCode(resultEnum.getCode());
-        this.setMsg(resultEnum.getMsg());
-        return this;
-    }
-
-    public LgdResult setData(D data) {
-        this.data = data;
-        return this;
     }
 
     void setSuccess(boolean success) {

@@ -27,6 +27,6 @@ public class SysCodeController extends LgdController {
     @PostMapping("genCode")
     public LgdResult<Boolean> genCode(@RequestBody SysCodeReq sysCodeReq) {
         validate(sysCodeReq);
-        return LgdResult.ok(sysCodeService.genCode(sysCodeReq));
+        return LgdResult.init(sysCodeService.genCode(sysCodeReq));
     }
 }

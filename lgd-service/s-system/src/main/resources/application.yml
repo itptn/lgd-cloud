@@ -1,7 +1,18 @@
 server:
-  port: 9000
+  port: 9010
 
 spring:
+  profiles:
+    active: dev
+  application:
+    name: s-system
+  cloud:
+    nacos:
+      discovery:
+        server-addr: node2:8088
+        namespace: ${spring.profiles.active}
+        group: LGD_GROUP
+
   redis:
     host: node2
     port: 6378
@@ -10,10 +21,10 @@ spring:
     database: 6
     lettuce:
       pool:
-        maxIdle: 50
-        minIdle: 20
-        maxActive: 50
-        maxWait: 3000
+        maxIdle: 8
+        minIdle: 2
+        maxActive: 4
+        maxWait: 6000
 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource

@@ -15,6 +15,7 @@
     <modules>
         <module>lgd-service</module>
         <module>lgd-common</module>
+        <module>lgd-feign</module>
     </modules>
 
     <properties>
@@ -25,8 +26,10 @@
 
         <spring-boot.version>2.3.5.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
 
         <mybatis-plus.version>3.4.0</mybatis-plus.version>
+        <druid.version>1.2.3</druid.version>
         <velocity.version>2.2</velocity.version>
         <commons-collections.version>4.1</commons-collections.version>
 
@@ -36,6 +39,16 @@
     <!-- 依赖声明 -->
     <dependencyManagement>
         <dependencies>
+
+            <!-- SpringBoot的依赖配置 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- SpringCloud 依赖配置 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -54,13 +67,11 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- SpringBoot的依赖配置 -->
+            <!-- druid -->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
             </dependency>
 
             <!-- mybatis-plus -->
@@ -123,6 +134,13 @@
             <dependency>
                 <groupId>com.lgd</groupId>
                 <artifactId>c-web</artifactId>
+                <version>${lgd.version}</version>
+            </dependency>
+
+            <!-- 乐观点-系统Feign接口 -->
+            <dependency>
+                <groupId>com.lgd</groupId>
+                <artifactId>f-system</artifactId>
                 <version>${lgd.version}</version>
             </dependency>
 

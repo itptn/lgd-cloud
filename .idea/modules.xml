@@ -6,8 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/lgd-common/c-cache/c-cache.iml" filepath="$PROJECT_DIR$/lgd-common/c-cache/c-cache.iml" />
       <module fileurl="file://$PROJECT_DIR$/lgd-common/c-utils/c-utils.iml" filepath="$PROJECT_DIR$/lgd-common/c-utils/c-utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/lgd-common/c-web/c-web.iml" filepath="$PROJECT_DIR$/lgd-common/c-web/c-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lgd-feign/f-system/f-system.iml" filepath="$PROJECT_DIR$/lgd-feign/f-system/f-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/lgd-cloud.iml" filepath="$PROJECT_DIR$/.idea/lgd-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/lgd-common/lgd-common.iml" filepath="$PROJECT_DIR$/lgd-common/lgd-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lgd-feign/lgd-feign.iml" filepath="$PROJECT_DIR$/lgd-feign/lgd-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/lgd-service/lgd-service.iml" filepath="$PROJECT_DIR$/lgd-service/lgd-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/lgd-service/s-gateway/s-gateway.iml" filepath="$PROJECT_DIR$/lgd-service/s-gateway/s-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/lgd-service/s-system/s-system.iml" filepath="$PROJECT_DIR$/lgd-service/s-system/s-system.iml" />

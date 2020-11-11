@@ -1,11 +1,11 @@
+com\lgd\system\pojo\req\LoginReq.class
 com\lgd\system\SystemRun.class
-com\lgd\system\pojo\dto\LoginDto.class
 com\lgd\system\controller\SysAuthController.class
 com\lgd\system\mapper\SysUserMapper.class
+com\lgd\system\pojo\req\SysCodeReq.class
 com\lgd\system\service\SysCodeService$1.class
 com\lgd\system\service\SysCodeService.class
 com\lgd\system\pojo\entity\SysUser.class
 com\lgd\system\service\ISysUserService.class
-com\lgd\system\pojo\dto\SysCodeDto.class
 com\lgd\system\controller\SysCodeController.class
 com\lgd\system\controller\SysUserController.class

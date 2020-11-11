@@ -1,0 +1,19 @@
+server:
+  port: 9000
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: s-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: node2:8088
+        namespace: ${spring.profiles.active}
+        group: LGD_GROUP
+      config:
+        server-addr: node2:8088
+        namespace: ${spring.profiles.active}
+        file-extension: yaml
+        group: LGD_GROUP

@@ -1,10 +1,10 @@
-D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\pojo\dto\SysCodeDto.java
 D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\controller\SysUserController.java
+D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\pojo\req\SysCodeReq.java
 D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\pojo\entity\SysUser.java
 D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\service\SysCodeService.java
 D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\SystemRun.java
+D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\pojo\req\LoginReq.java
 D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\service\ISysUserService.java
 D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\controller\SysAuthController.java
-D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\pojo\dto\LoginDto.java
 D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\mapper\SysUserMapper.java
 D:\WorkSpace\lgd\lgd-cloud\lgd-service\s-system\src\main\java\com\lgd\system\controller\SysCodeController.java

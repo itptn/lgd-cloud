@@ -43,7 +43,5 @@
             <groupId>com.lgd</groupId>
             <artifactId>c-utils</artifactId>
         </dependency>
-
-
     </dependencies>
 </project>

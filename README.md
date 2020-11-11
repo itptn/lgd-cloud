@@ -8,23 +8,31 @@
 * 后端版本 [lgd-cloud](https://gitee.com/itptn/lgd-cloud.git)
 * 前端版本 [lgd-web](https://gitee.com/itptn/lgd-web.git)
 
-框架(组件) | 版本 | 说明
+组件(Jar包) | 版本 | 说明
 ---|---|---
+Spring Boot | 2.3.5.RELEASE | Spring-boot组件包
 Spring Cloud | Hoxton.SR8 | 微服务架构组件包
-Spring Alibaba Cloud | 2.3.5.RELEASE | 微服务阿里组件包
-Spring Boot | 2.3.5.RELEASE |
-| | | 服务限流降级
-| | | 服务注册与发现
-| | | 配置中心
-Spring Data Redis | 2.3.5.RELEASE | 缓存
+Spring Alibaba Cloud | 2.2.3.RELEASE | 微服务阿里组件包
+Spring Data Redis | 2.3.5.RELEASE | Redis缓存
 MyBatis-Plus | 3.4.0 | MyBatis增强工具
+Druid | 1.2.3 | JDBC组件库
+Mysql-connector-java | 8.0.22 | Java MySQL连接
+Nacos Discovery | 2.2.3.RELEASE | 服务注册与发现
+Spring Cloud Gateway | 2.2.3.RELEASE | API网关
+Nacos Config | 2.2.3.RELEASE | 分布式配置管理
+
 
 #### 开发日志
+- 2020-11-11
+- [X] 实现认证授权功能
+- [X] 实现分布式配置管理
 - 2020-11-10
-- [X] 添加网关模块
-- [x] 实现登录功能
-- [X] 实现权限功能
+- [X] 添加Nacos网关模块
+- [X] 添加服务注册与发现
+- [x] 实现代码生成功能
+- [X] 实现缓存功能
 - 2020-11-04
+- [x] 添加常用基础模块
 - [x] 后端空项目框架提交
 
 #### 使用说明
@@ -35,6 +43,11 @@ MyBatis-Plus | 3.4.0 | MyBatis增强工具
 ---|---|---|---|---|---|---
 node1 | 47.*.*.177 | - | - | - | 节点 | 从
 node2 | 118.*.*.115 | 主 | 从 | 主 | 节点 | 从
+
+微服务 | IP | 端口
+---|---|---
+s-gateway | node1 | 9000
+s-system | node1 | 9010
 
 ##### 组件版本
 - CentOS 7.6 64位
@@ -64,9 +77,10 @@ spring.datasource.platform=mysql
 db.num=1
 
 ### Connect URL of DB:
-db.url.0=jdbc:mysql://node1:3306/lgd_nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+db.url.0=jdbc:mysql://node1:3306/lgd_nacos?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
 db.user=lgd
 db.password=lgd
+
 
 cd nacos/bin
 sh startup.sh
@@ -74,4 +88,3 @@ sh startup.sh -m standalone
 ```
 - 
 - 
-

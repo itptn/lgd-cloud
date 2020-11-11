@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2020-11-09
  */
 @RestController
-@RequestMapping("/system/sys-user")
+@RequestMapping("/sys-user")
 public class SysUserController extends LgdController {
 
     @Autowired
@@ -33,5 +33,4 @@ public class SysUserController extends LgdController {
         Page<SysUser> list = sysUserService.page(new Page<>(current, pageSize), new QueryWrapper<>(sysUser));
         return getData(list);
     }
-
 }
